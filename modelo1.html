@@ -48,23 +48,20 @@
     document.getElementById("nombre").textContent = nombre;
 
     // Reproducir sonido al terminar la animación de apertura
-    const front = document.querySelector(".front");
+    const card = document.querySelector(".card");
     const sound = document.getElementById("sound");
-    front.addEventListener("animationend", () => {
-      // Requiere interacción en algunos navegadores móviles
-      sound.play().catch(() => {
-        // Si el navegador bloquea autoplay, mostramos un botón:
-        const btn = document.createElement("button");
-        btn.textContent = "Escuchar";
-        btn.style.marginTop = "1rem";
-        btn.onclick = () => sound.play();
-        document.querySelector(".content").appendChild(btn);
-      });
+
+    card.addEventListener("click", () => {
+    card.querySelector(".front").classList.add("open");
+    sound.play();
+    });
+
     });
   </script>
 </body>
 
 </html>
+
 
 
 
