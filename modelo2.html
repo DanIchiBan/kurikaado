@@ -23,6 +23,21 @@
     p { color: #fff; width: 200px; }
     .badge { margin-top: 0.8rem; background: var(--accent); color: #fff; padding: 0.4rem 0.7rem; border-radius: 20px; font-weight: 600; }
     .tip { margin-top: 1rem; font-size: 0.9rem; color: #666; }
+
+    .firma {
+      position: absolute;   /* se coloca respecto al contenedor */
+      bottom: 10px;         /* distancia desde abajo */
+      right: 10px;          /* distancia desde la derecha */
+      font-family: 'Cursive', sans-serif; /* estilo manuscrito */
+      font-size: 1.2rem;
+      color: #fff;          /* color de la firma */
+      opacity: 0;
+      animation: aparecer 2s ease forwards 1.5s; /* aparece después de 1.5s */
+    }    
+    @keyframes aparecer {
+    to { opacity: 0.8; }
+    }
+
   </style>
 </head>
 <body>
@@ -34,6 +49,7 @@
           <p id="frase"></p>
           <!-- <div class="badge">Tarjeta sorpresa 🎲</div>
           <p class="tip">(Haz clic para abrir y escuchar 🎶)</p>  -->
+          <div class="firma">Dan</div>
         </div>
       </div>
       <div class="panel front"></div>
@@ -113,6 +129,7 @@
   </script>
 </body>
 </html>
+
 
 
 
